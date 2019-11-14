@@ -35,7 +35,7 @@ public class ThreadedMinimumPairwiseDistance implements MinimumPairwiseDistance 
     public class LowerLeft implements Runnable{
 
         public void run() {
-            for (int i = 0; i < size/2; ++i) {
+            for (int i = size-size; i < size/2; ++i) {
                 for (int j = 0; j < i; ++j) {
                     long diff = Math.abs(values[i] - values[j]);
                     if (diff < result) {
